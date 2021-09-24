@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {arr.map((e, i) => (
-          <h2 key={i}>{e}</h2>
-        ))}
+        {arr.map((e, i) => {
+          return <h2 key={i}>{e}</h2>;
+        })}
       </header>
     </div>
   );
