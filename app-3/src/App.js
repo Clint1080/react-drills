@@ -1,23 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Filtered from "./components/Filtered";
+import UserInput from "./components/UserInput";
 
 function App() {
+  const [filteredArr, setfilteredArr] = useState([]);
+  const [userInput, setuserInput] = useState("");
+
+  const [arr] = useState(["american", "swiss", "gouda", "provolone"]);
+
+  const handleFilter = (e) => {
+    setuserInput(e);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Filtered string={userInput} data={arr} />
+        <UserInput onChange={(e) => handleFilter(e.target.value)} />
       </header>
     </div>
   );
