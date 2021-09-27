@@ -11,16 +11,20 @@ function App() {
   };
 
   const handleClick = (e) => {
+    setUserInput("");
     let list = [...task];
     list.push(e);
     setTask(list);
-    console.log(list);
   };
 
   return (
     <div className="App">
       <header className="App-header">
-        <input onChange={handleChange} placeholder="Enter something to do" />
+        <input
+          value={userInput}
+          onChange={handleChange}
+          placeholder="Enter something to do"
+        />
         <button onClick={() => handleClick(userInput)}>add</button>
         <ToDo taskImport={task} />
       </header>

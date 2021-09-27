@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const api = async () => {
       const getData = await axios.get(
-        "https://pokeapi.co/api/v2/pokemon/ditto"
+        "https://pokeapi.co/api/v2/pokemon/jigglypuff"
       );
       setApiData(getData.data.name);
     };
