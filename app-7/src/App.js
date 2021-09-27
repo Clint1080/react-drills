@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
-import ToDo from "./Components/ToDo";
-import List from "./Components/List";
-import NewTask from "./Components/NewTask";
+import ToDo from "./components/ToDo";
+import List from "./components/List";
+import NewTask from "./components/NewTask";
 
 function App() {
   const [userInput, setUserInput] = useState("");
